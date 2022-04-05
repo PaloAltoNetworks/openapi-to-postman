@@ -1,6 +1,6 @@
 {
   "name": "@paloaltonetworks/openapi-to-postmanv2",
-  "version": "3.1.0-hotfix.3",
+  "version": "3.1.0-hotfix.4",
   "description": "Convert a given OpenAPI specification to Postman Collection v2.0",
   "homepage": "https://github.com/PaloAltoNetworks/openapi-to-postman",
   "bugs": "https://github.com/PaloAltoNetworks/openapi-to-postman/issues",
