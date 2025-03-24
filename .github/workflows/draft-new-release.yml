@@ -19,13 +19,13 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
 
       - name: Create release branch
         run: git checkout -b release/${{ github.event.inputs.version }}
 
       - name: Update changelog
-        uses: thomaseizinger/keep-a-changelog-new-release@1.1.0
+        uses: thomaseizinger/keep-a-changelog-new-release@12fc35b87d91543d6b0dda0e853c6465eb723c4b # 1.1.0
         with:
           version: ${{ github.event.inputs.version }}
 
@@ -63,7 +63,7 @@ jobs:
             I've updated the changelog and bumped the versions in the manifest files in this commit: ${{ steps.make-commit.outputs.commit }}.
 
       - name: Create pull request for develop
-        uses: thomaseizinger/create-pull-request@1.0.0
+        uses: thomaseizinger/create-pull-request@708b87f1bf8075327bd126082bb2430020bab194 # 1.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
